@@ -23,18 +23,17 @@ public class RepositoryController {
 
     @GetMapping
     public ResponseEntity<List<Repository>> getRepostoryList() throws IOException {
-        System.out.println("Récupération de l'assemblee generale par son Identifiant");
+
         return ResponseEntity.status(HttpStatus.OK).body(repositoryService.getRepostoryList());
     }
 
     @GetMapping("/languages")
     public ResponseEntity<List<String>> getTopTrendingRepositoriesLanguageList() throws IOException {
-        System.out.println("Récupération de l'assemblee generale par son Identifiant");
         return ResponseEntity.status(HttpStatus.OK).body(repositoryService.getTopTrendingRepositoriesLanguageList());
     }
     @GetMapping("/languages/counts")
     public ResponseEntity<Map<String,Long>> getCountLanguage() throws IOException {
-        System.out.println("Récupération de l'assemblee generale par son Identifiant");
+
         return ResponseEntity.status(HttpStatus.OK).body(repositoryService.getCountLanguage());
     }
 }
